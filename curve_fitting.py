@@ -35,7 +35,7 @@ def curve_fitting():
     tol = 1e-6    
 
     x = 1
-    y = 7
+    y = 8
     while True :
         a = (C_1 - (Y_1)*y)/X_1
         b = (C_2 - (X_1)*x)/Y_2
