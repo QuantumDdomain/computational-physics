@@ -34,4 +34,4 @@ Welcome to my **Computational Physics** repository! This space is dedicated to v
 1. Clone the repository:  
    ```bash
    git clone https://github.com/QuantumDdomain/ComputationalPhysics.git
-   cd ComputationalPhysics
+
