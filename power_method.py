@@ -1,8 +1,8 @@
 import numpy as np
 
-matrix = np.array([[4,1],
-    [2,3]])
-initial_V = np. array([[1],[11]])
+matrix = np.array([[6,-2],
+    [-2,6]])
+initial_V = np. array([[1],[6]])
 
 def transpose(A) :
 
