@@ -16,7 +16,7 @@ def fixed_point(fn, a, tol=1e-6) :
 
     return x
 
-a = 2
+a = 1.0
 solution = fixed_point(fn ,a )
 
 print("value is :" ,solution)
