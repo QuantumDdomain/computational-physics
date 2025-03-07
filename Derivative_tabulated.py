@@ -14,7 +14,7 @@ def point_3_dy(A ,B ,x) :
 
 def point_5_dy(A ,B ,x) :  
     i = np.searchsorted(A, x)
-    return ((-B[i + 2] + 8*B[i + 1] - 8*B[i-1] + [i - 2])/(3*(A[i+2]-A[i-2])))    
+    return ((-B[i + 2] + 8*B[i + 1] - 8*B[i-1] + B[i - 2])/(3*(A[i+2]-A[i-2])))    
 
 x = 10
 print()
@@ -23,6 +23,6 @@ a = point_2_dy(A ,B ,x )
 b = point_3_dy(A ,B ,x )
 c = point_5_dy(A ,B ,x )
 
-print(a)
-print(b)
-print(c)
+print("2_point",a)
+print("3_point",b)
+print("5_point",c)
