@@ -1,7 +1,7 @@
 import numpy as np
 
-A = np.array([1, 2, 3, 4])
-B = np.array([1, 1/2, 1/3, 1/4])
+A = np.array([0, 1, 2, 3])
+B = np.array([1, 2, 33, 244])
 h = A[1] - A[0]  # Assumes equally spaced A values
 
 def compute_second_derivatives(A, B, h):
