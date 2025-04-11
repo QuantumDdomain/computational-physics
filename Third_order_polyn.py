@@ -35,5 +35,21 @@ def iii_order_polynomial(X ,Y , x):
     return y
 
 x = 2
-solution = iii_order_polynomial(X ,Y , x)
-print (solution)
+solution_1 = iii_order_polynomial(X ,Y , x)
+print (solution_1)
+
+######################################################
+
+f = lambda i : (Y[i+1] - Y[i])/(X[i+1] - X[i])
+
+def third_order_polynomial(X,Y,x):
+    b_0 = f(0)
+    b_1 = (f(1) - f(0))/(X[2] - X[0])
+    b_2 = (((f(2) - f(1))/(X[3] - X[1])) - ((f(1) - f(0))/(X[2] - X[0])))/(X[3] - X[0])
+
+    y = Y[0] + b_0 *(x - X[0]) + b_1 *(x - X[0])*(x - X[1]) + b_2 * (x - X[0])*(x - X[1])*(x -X[2]) 
+    return y
+
+x = 2
+solution_2 = third_order_polynomial(X,Y,x)
+print (solution_2)

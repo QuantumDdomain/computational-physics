@@ -38,7 +38,7 @@ def curve_fitting():
     y = 0
     while True :
         a = (C_1 - (Y_1)*y)/X_1
-        b = (C_2 - (X_1)*x)/Y_2
+        b = (C_2 - (X_2)*x)/Y_2
 
         if abs(a - x) < tol and abs(b - y) < tol:
             break
