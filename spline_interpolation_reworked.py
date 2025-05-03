@@ -17,15 +17,14 @@ def compute_second_derivatives(A, B, h):
         if i == 0 or i == n:
             C[i, i] = 1
         else:
-            C[i, i - 1] = 1
-            C[i, i] = 4
-            C[i, i + 1] = 1
+            C[i, i - 1] = (A[i]-A[i-1])/6
+            C[i, i] = (A[i+1]-A[i-1])/3
+            C[i, i + 1] = (A[i+1]-A[i])/6
 
     # Build right-hand side vector D using interior points
     D = np.zeros(n - 1)
     for i in range(1, n):
-        D[i - 1] = 6 * (B[i + 1] - 2 * B[i] + B[i - 1]) / (h ** 2)
-    
+        D[i - 1] = (B[i+1] - B[i])/(A[i+1] - A[i]) - (B[i] - B[i-1])/(A[i] - A[i-1])    
     # Solve for interior second derivatives
     M[1:n] = np.linalg.solve(C[1:n, 1:n], D)
     return M

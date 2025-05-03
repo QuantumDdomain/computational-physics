@@ -43,7 +43,7 @@ def eigenvector (A,eigenvalues):
     for i in range(n):
         print (round(abs(eigenvalues[i]), 3))
         shifted_A = A - round(abs(eigenvalues[i]), 3) * np.identity(p)
-        print(shifted_A)
+        #print(shifted_A)
         eigenvector = gauss_elimination(shifted_A)
         matrix_zeta = np.array(eigenvector)
         print(matrix_zeta)
